@@ -13,7 +13,7 @@ class ProgressStep extends React.Component {
     return (
       <div className="step-container">
         <div className={`step-number ${activeStep === item || activatedSteps.includes(item) ? 'step-number-active' : ''}`}>{stepNumber}</div>
-        <div className={`step-description ${activeStep === item || activatedSteps.includes(item) ? 'step-descriptopn-active' : ''}`} style={{color: `${activeStep === item || activatedSteps.includes(item) ? 'black' : ''}`}}>{stepDescription.replace("_STEP", "")}</div>
+        <div className={`step-description ${activeStep === item || activatedSteps.includes(item) ? 'step-descriptopn-active' : ''}`}>{stepDescription.replace("_STEP", "")}</div>
       </div>
     );
   }
