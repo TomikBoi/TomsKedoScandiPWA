@@ -10,6 +10,7 @@
   height: 5%;
   background-color: $default-secondary-light-color;
   border-radius: 50px;
+  transition: background-color 1.5s;
 
   &-active {
     background-color: $default-primary-base-color;

@@ -15,6 +15,7 @@
   text-align: center;
   font-size: 22px;
   margin-bottom: 3px;
+  transition: background-color 1.5s;
 
   &-active {
     background-color: $default-primary-base-color;
@@ -26,6 +27,7 @@
   font-size: 16px;
   font-weight: bold;
   color: $default-secondary-light-color;
+  transition: color 1,5s;
 
   &-active {
     color: $black;
