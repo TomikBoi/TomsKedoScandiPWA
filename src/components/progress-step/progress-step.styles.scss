@@ -10,15 +10,24 @@
   width: 36px;
   height: 36px;
   padding: 6px;
-  background: #E4E4E4;
-  color: #DBDBDB;
+  background: $default-secondary-base-color;
+  color: $default-secondary-light-color;
   text-align: center;
   font-size: 22px;
   margin-bottom: 3px;
+
+  &-active {
+    background-color: $default-primary-base-color;
+    color: $white;
+  }
 }
 
 .step-description {
   font-size: 16px;
   font-weight: bold;
-  color: rgb(183,183,183);
+  color: $default-secondary-light-color;
+
+  &-active {
+    color: $black;
+  }
 }

@@ -12,8 +12,8 @@ class ProgressStep extends React.Component {
     } = this.props;
     return (
       <div className="step-container">
-        <div className="step-number" style={{backgroundColor: `${activeStep === item || activatedSteps.includes(item) ? '#A82222' : ''}`}}>{stepNumber}</div>
-        <div className="step-description" style={{color: `${activeStep === item || activatedSteps.includes(item) ? 'black' : ''}`}}>{stepDescription.replace("_STEP", "")}</div>
+        <div className={`step-number ${activeStep === item || activatedSteps.includes(item) ? 'step-number-active' : ''}`}>{stepNumber}</div>
+        <div className={`step-description ${activeStep === item || activatedSteps.includes(item) ? 'step-descriptopn-active' : ''}`} style={{color: `${activeStep === item || activatedSteps.includes(item) ? 'black' : ''}`}}>{stepDescription.replace("_STEP", "")}</div>
       </div>
     );
   }

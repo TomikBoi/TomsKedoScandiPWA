@@ -29,14 +29,14 @@ class ProgressBar extends React.Component {
             {arr.length - 1 === index ? 
               <>
                 <div
-                  className="progressbar-filler"
-                  style={{ width: `calc(100% / ${divideBy})`, backgroundColor: `${activeStep === item || this.state.activatedSteps.includes(item) ? '#A82222' : ''}` }}></div>
+                  className={`progressbar-filler ${activeStep === item || this.state.activatedSteps.includes(item) ? 'progressbar-filler-active' : ''}`}
+                  style={{ width: `calc(100% / ${divideBy})`, backgroundColor: `${activeStep === item || this.state.activatedSteps.includes(item) ? '$default-primary-base-color' : ''}` }}></div>
               </>
              : 
               <>
                 <div
-                  className="progressbar-filler"
-                  style={{ width: `calc(100% / ${divideBy})`, backgroundColor: `${activeStep === item || this.state.activatedSteps.includes(item) ? '#A82222' : ''}` }}
+                className={`progressbar-filler ${activeStep === item || this.state.activatedSteps.includes(item) ? 'progressbar-filler-active' : ''}`}
+                  style={{ width: `calc(100% / ${divideBy})`}}
                 />
                 <ProgressStep stepNumber={index + 1} stepDescription={item} activeStep={activeStep} item={item} activatedSteps={this.state.activatedSteps}/>
               </>
