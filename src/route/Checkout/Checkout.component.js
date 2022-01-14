@@ -2,13 +2,11 @@ import { Checkout as SourceCheckout } from "SourceRoute/Checkout/Checkout.compon
 import ContentWrapper from "@scandipwa/scandipwa/src/component/ContentWrapper";
 import ProgressBar from "src/components/progress-bar/progress-bar.component";
 import "./Checkout.extensions.style.scss";
-import ProgressStep from "src/components/progress-step/progress-step.component";
 class Checkout extends SourceCheckout {
   render() {
     return (
       <main block="Checkout">
-
-        <ProgressBar activeStep={this.props.match.params.step} numberOfSteps={this.stepMap}/>)
+        <ProgressBar activeStep={this.props.checkoutStep} numberOfSteps={this.stepMap} />)
         <ContentWrapper
           wrapperMix={{ block: "Checkout", elem: "Wrapper" }}
           label={__("Checkout page")}>

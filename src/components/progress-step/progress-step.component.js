@@ -5,18 +5,15 @@ class ProgressStep extends React.Component {
   render() {
     const {
       stepDescription,
-      accomplished,
+      activeStep,
       stepNumber,
-      position,
-      index,
-      children,
-      transition = null,
-      transitionDuration = 300,
+      item,
+      activatedSteps
     } = this.props;
     return (
       <div className="step-container">
-        <div className="step-number">{stepNumber}</div>
-        <div className="step-description">{stepDescription.replace("_STEP", "")}</div>
+        <div className="step-number" style={{backgroundColor: `${activeStep === item || activatedSteps.includes(item) ? '#A82222' : ''}`}}>{stepNumber}</div>
+        <div className="step-description" style={{color: `${activeStep === item || activatedSteps.includes(item) ? 'black' : ''}`}}>{stepDescription.replace("_STEP", "")}</div>
       </div>
     );
   }
