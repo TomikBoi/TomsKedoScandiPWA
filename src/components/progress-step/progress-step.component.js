@@ -3,10 +3,20 @@ import "./progress-step.styles.scss";
 
 class ProgressStep extends React.Component {
   render() {
+    const {
+      stepDescription,
+      accomplished,
+      stepNumber,
+      position,
+      index,
+      children,
+      transition = null,
+      transitionDuration = 300,
+    } = this.props;
     return (
       <div className="step-container">
-        <div className="step-number">1</div>
-        <div className="step-description">Shipping</div>
+        <div className="step-number">{stepNumber}</div>
+        <div className="step-description">{stepDescription.replace("_STEP", "")}</div>
       </div>
     );
   }
