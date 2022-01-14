@@ -1,0 +1,14 @@
+.progressbar-container{
+  display: flex;
+  align-items: center;
+  height: 80px;
+  width: 100%;
+  background-color: rgb(238, 238, 238);
+}
+
+.progressbar-filler{
+  height: 10%;
+  width: 50%;
+  background-color: black;
+  border-radius: 50px;
+}
