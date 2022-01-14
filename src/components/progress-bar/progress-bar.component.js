@@ -9,7 +9,6 @@ class ProgressBar extends React.Component {
   };
 
   componentDidUpdate(prevProps) {
-    console.log(this.props.activeStep)
     if (this.props.activeStep !== prevProps.activeStep) {
       this.setState({activatedSteps: [...this.state.activatedSteps ,this.props.activeStep]});
     }
