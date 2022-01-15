@@ -6,7 +6,7 @@ class Checkout extends SourceCheckout {
   render() {
     return (
       <main block="Checkout">
-        <ProgressBar activeStep={this.props.checkoutStep} numberOfSteps={this.stepMap} />)
+        <ProgressBar activeStep={this.props.checkoutStep} numberOfSteps={this.stepMap} />
         <ContentWrapper
           wrapperMix={{ block: "Checkout", elem: "Wrapper" }}
           label={__("Checkout page")}>
